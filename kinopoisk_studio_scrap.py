@@ -1,14 +1,10 @@
 import selenium
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import sys
-import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support import expected_conditions as EC
-import xlsxwriter
+from selenium.webdriver.common.keys import Keys
+
 
 studio_list=[]
 studio_values=[]
@@ -25,6 +21,9 @@ studios=all_studios.options
 for index in range(2, len(studios)):
     studio_list.append((studios[index].text))
     studio_values.append((studios[index].get_attribute('value')))
+
+print('Succesfully!') 
     
+
 driver.quit()
-print(studio_list,studio_values)
+
